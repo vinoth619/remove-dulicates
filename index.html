@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove duplicates</title>
+</head>
+<body>
+    <h1>REMOVE DUPLICATES FROM ARRAY</h1>
+    <input type="text" name="" id="gh" placeholder="enter the numper only">
+    <button onclick="add()">push to array</button>
+    <button onclick="send()"> show result</button>
+    <h2 id="show"></h2>
+    <h2 id="show1"></h2>
+    <script>
+        var inp=document.getElementById("gh")
+            
+             var ar=[]
+            function add(){
+               ar.push(inp.value)
+               document.getElementById("show").innerText="Actual array is :"+(ar.toString());
+
+                }
+           var filt=[];
+
+           function send(){
+            for(let i=0; i<ar.length;i++){
+                if(filt.includes(ar[i])==false){
+                    filt.push(ar[i])
+                    
+                }
+            }
+             document.getElementById("show1").innerHTML="after removing : "+filt.toString()
+
+           }
+
+                    
+
+          
+
+    </script>
+
+    
+</body>
+</html>
